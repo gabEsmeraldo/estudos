@@ -35,14 +35,13 @@ public class JanelaPrincipal extends JFrame{
 
                 try {
                     linhas = Files.readAllLines(caminho);
+                    for (String linha : linhas) {
+                        System.out.println(linha);
+                    }
                 }
                 catch(IOException f) {
                     f.printStackTrace();
-                }
-
-                for (String linha : linhas) {
-                    System.out.println(linha);
-                }
+                }             
             }
         });
         setVisible(true);
