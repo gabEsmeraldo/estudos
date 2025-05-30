@@ -1,11 +1,11 @@
-import javax.swing.*; // Importamos a biblioteca Swing
+import javax.swing.*;
 public class Main {
     
     public static void main(String[] args) {
-        // Criar a janela na thread de despacho de eventos (melhor prática para Swing)
         SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new JanelaPrincipal();
+                new ProgramaPlacas();
             }
         });
     }
