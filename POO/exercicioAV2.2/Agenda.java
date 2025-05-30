@@ -1,6 +1,6 @@
 import java.util.LocalDateTime;
 public class Agenda implements Agendavel{
-    Private Acao[][] semana;
+    //Private Acao[][] semana;
 
     public Agenda() {
         semana = new Acao[7][13]; // 7 dias, 13 horários (08h às 20h)

@@ -4,7 +4,7 @@ abstract class Acao{
     private String nome;
     
     Acao(){
-        dataHora = ;
+        //dataHora = 0;
         nome = "";
     }
 
