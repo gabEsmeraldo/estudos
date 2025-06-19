@@ -1,0 +1,58 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 2em;
+  background-image: url('veins-texture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  border-radius: 10px;
+}
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 150px;
+}
+.intro {
+  margin-bottom: 2em;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 1em;
+}
+.radio-option{
+  margin-right: 8px;
+  align-content: center;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  margin: 4px 0;
+  display: block;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: darkred;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#toggle-music {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+.thanks {
+  margin-top: 3em;
+  text-align: center;
+}
+
