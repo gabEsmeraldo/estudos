@@ -1,19 +1,20 @@
-import javax.swing.*; // Importamos a biblioteca Swing
 import java.awt.event.ActionEvent; // Para eventos de ação
 import java.awt.event.ActionListener; // Para o listener de ação
-import java.util.List;
-import java.nio.file.*;
-import java.awt.event.*;
 import java.io.*;
-public class JanelaPrincipal extends JFrame{
+import java.nio.file.*;
+import java.util.List;
+import javax.swing.*; // Importamos a biblioteca Swing
+
+public class JanelaPrincipal extends JFrame {
+
     private JLabel pathLabel;
     private JTextField pathField;
     private JButton procurarBotao;
     protected List<String> linhas;
 
-    public JanelaPrincipal(){
+    public JanelaPrincipal() {
         setTitle("Checagem de counteudo de arquivo");
-        setSize(450,130);
+        setSize(450, 130);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -27,26 +28,24 @@ public class JanelaPrincipal extends JFrame{
         add(pathField);
         add(procurarBotao);
 
-        procurarBotao.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String path = pathField.getText();
-                Path caminho = Paths.get(path); 
+        procurarBotao.addActionListener(
+            new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String path = pathField.getText();
+                    Path caminho = Paths.get(path);
 
-                try {
-                    linhas = Files.readAllLines(caminho);
-                    for (String linha : linhas) {
-                        System.out.println(linha);
+                    try {
+                        linhas = Files.readAllLines(caminho);
+                        for (String linha : linhas) {
+                            System.out.println(linha);
+                        }
+                    } catch (IOException f) {
+                        f.printStackTrace();
                     }
                 }
-                catch(IOException f) {
-                    f.printStackTrace();
-                }             
             }
-        });
+        );
         setVisible(true);
     }
-
-
-    
 }
